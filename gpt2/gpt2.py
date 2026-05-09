@@ -272,7 +272,7 @@ class GPT2(nn.Module):
 
 if __name__ == "__main__":
     model_cfg = GPT2Config()
-
+    # 配置GPU
     if torch.backends.mps.is_available():
         device = torch.device("mps")
     elif torch.cuda.is_available():
